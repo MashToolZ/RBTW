@@ -27,7 +27,6 @@ public class PlayerStats {
     private static final PlayerListHudAccessor playerListHud = (PlayerListHudAccessor) client.inGameHud.getPlayerListHud();
 
     private Swimsuit swimsuit = Swimsuit.TIER_0;
-    ;
 
     private double Money = 0.0;
     private double ItemsSinceToe = 0;
@@ -42,15 +41,15 @@ public class PlayerStats {
     private int AD = 0;
 
     private final Upgrades upgrades = new Upgrades();
-    private final Archeologist archeologist = new Archeologist();
-    private final Librarian librarian = new Librarian();
-    private final Alberto alberto = new Alberto();
-    private final Museum museum = new Museum();
-    private final Fisher fisher = new Fisher();
-    private final Computer computer = new Computer();
+    private final Shop archeologist = new Shop();
+    private final Shop librarian = new Shop();
+    private final Shop alberto = new Shop();
+    private final Shop museum = new Shop();
+    private final Shop fisher = new Shop();
+    private final Shop computer = new Shop();
     private final Clicker clicker = new Clicker(new int[]{0, 0, 0, 0});
-    private final Raft raft = new Raft();
-    private final AlternateDimension alternateDimension = new AlternateDimension();
+    private final Shop raft = new Shop();
+    private final Shop alternateDimension = new Shop();
     private final MrMoney mrMoney = new MrMoney();
 
     private final Map<String, Double> moneyAdditions = new LinkedHashMap<>();
@@ -324,27 +323,27 @@ public class PlayerStats {
         return upgrades;
     }
 
-    public Librarian getLibrarian() {
+    public Shop getLibrarian() {
         return librarian;
     }
 
-    public Alberto getAlberto() {
+    public Shop getAlberto() {
         return alberto;
     }
 
-    public Museum getMuseum() {
+    public Shop getMuseum() {
         return museum;
     }
 
-    public Archeologist getArcheologist() {
+    public Shop getArcheologist() {
         return archeologist;
     }
 
-    public Fisher getFisher() {
+    public Shop getFisher() {
         return fisher;
     }
 
-    public Computer getComputer() {
+    public Shop getComputer() {
         return computer;
     }
 
@@ -352,11 +351,11 @@ public class PlayerStats {
         return clicker;
     }
 
-    public Raft getRaft() {
+    public Shop getRaft() {
         return raft;
     }
 
-    public AlternateDimension getAlternateDimension() {
+    public Shop getAlternateDimension() {
         return alternateDimension;
     }
 

@@ -12,9 +12,10 @@ import java.util.regex.Pattern;
 
 public class NumberUtils {
 
-    public static final DecimalFormat FORMAT_1 = new DecimalFormat("#,##0.###");
-    public static final DecimalFormat FORMAT_2 = new DecimalFormat("#.0");
-    public static final DecimalFormat FORMAT_3 = new DecimalFormat("#.00");
+    public static final DecimalFormat COMPACT_FORMAT = new DecimalFormat("#,##0.###");
+    public static final DecimalFormat FORMAT_1 = new DecimalFormat("#.0");
+    public static final DecimalFormat FORMAT_2 = new DecimalFormat("#.00");
+    public static final DecimalFormat FORMAT_3 = new DecimalFormat("#.000");
 
     public static double logN(double base, double value) {
         return Math.log(value) / Math.log(base);
@@ -43,9 +44,9 @@ public class NumberUtils {
     }
 
     private static String format(double number) {
-        FORMAT_1.setMinimumFractionDigits(2);
-        FORMAT_1.setMaximumFractionDigits(3);
-        return FORMAT_1.format(number);
+        COMPACT_FORMAT.setMinimumFractionDigits(2);
+        COMPACT_FORMAT.setMaximumFractionDigits(3);
+        return COMPACT_FORMAT.format(number);
     }
 
     public static double parseCompact(String input) {

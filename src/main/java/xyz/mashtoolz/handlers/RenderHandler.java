@@ -22,7 +22,10 @@ import xyz.mashtoolz.config.TBTW;
 import xyz.mashtoolz.enums.Color;
 import xyz.mashtoolz.interfaces.EntityInterface;
 import xyz.mashtoolz.mixins.BossBarHudAccessor;
-import xyz.mashtoolz.rbtw.*;
+import xyz.mashtoolz.rbtw.ClickerLevels;
+import xyz.mashtoolz.rbtw.Layer;
+import xyz.mashtoolz.rbtw.PlayerStats;
+import xyz.mashtoolz.rbtw.Shop;
 import xyz.mashtoolz.render.DrawBox;
 import xyz.mashtoolz.utils.ColorUtils;
 import xyz.mashtoolz.utils.NumberUtils;
@@ -88,9 +91,9 @@ public class RenderHandler {
 
         CBTW config = RBTW.getConfig();
 
-        Fisher fisher = playerStats.getFisher();
-        Archeologist archeologist = playerStats.getArcheologist();
-        Museum museum = playerStats.getMuseum();
+        Shop fisher = playerStats.getFisher();
+        Shop archeologist = playerStats.getArcheologist();
+        Shop museum = playerStats.getMuseum();
 
         boolean unlockedFishPoints = fisher.getCurrency() > 0;
 
